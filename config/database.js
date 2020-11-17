@@ -10,7 +10,7 @@ const {ConnectionString} = require('connection-string');
   settings.database = parsed.path[0];
   settings.username = parsed.user;
   settings.password = parsed.password;
-  settings.ssl = false;
+  settings.ssl = process.env.DATABASE_SSL;
 
 
 module.exports = {
