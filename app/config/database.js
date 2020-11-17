@@ -1,7 +1,6 @@
 const {ConnectionString} = require('connection-string');
 
-  const parsed = new ConnectionString('postgres://nhzjizcscxgpva:eabd54208622825698dc546dd8209ace06683b2c56d9fde69cdcd6193ce6b15f@ec2-35-171-109-11.compute-1.amazonaws.com:5432/d6o4iig8ioq8bl');
-  //const [username, password] = parsed.auth.split(':');
+  const parsed = new ConnectionString(process.env.DATABASE_URL);
 
   let settings = {
     client: 'postgres'
